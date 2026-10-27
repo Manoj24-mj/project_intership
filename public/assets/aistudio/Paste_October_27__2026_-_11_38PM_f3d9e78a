@@ -1,0 +1,1171 @@
+# MASTER DEVELOPMENT PROMPT — TRAVELBHARAT
+## Explore India State by State | Complete Full-Stack Tourism Platform
+
+Act as a senior full-stack developer, UI/UX designer, software architect, database engineer, QA tester, SEO specialist, and deployment engineer.
+
+Your task is to PLAN, DESIGN, DEVELOP, TEST, DOCUMENT, and PREPARE FOR DEPLOYMENT a complete, professional, responsive tourism web application named:
+
+**TravelBharat – Explore India State by State**
+
+This project is being developed as part of the Unified Mentor internship. Build a genuine, functional, maintainable application suitable for an internship evaluation, project demonstration, GitHub portfolio, and future enhancement.
+
+Do not stop after generating a homepage or static UI. Complete all essential frontend, backend, database, administrative, validation, testing, and documentation work.
+
+Do not merely provide instructions or code snippets. Work directly on the project files using the available coding environment.
+
+---
+
+# 1. PROJECT OBJECTIVE
+
+Build a centralized digital tourism encyclopedia for India where users can discover states, union territories, cities, tourist destinations, cultural attractions, heritage sites, religious places, nature destinations, and adventure experiences.
+
+The platform should organize information consistently and make Indian tourism easier to explore.
+
+The primary audience includes:
+- Domestic and international travelers.
+- Students and researchers.
+- Tourism enthusiasts.
+- People exploring lesser-known Indian destinations.
+- Administrators responsible for tourism content.
+
+The website must have a polished, trustworthy, informative, visually appealing design and work properly on mobile phones, tablets, laptops, and desktop computers.
+
+## Core problem to solve
+
+Tourism information is currently scattered across different websites, making it difficult to find organized, reliable, state-wise and city-wise destination information.
+
+TravelBharat should solve this by presenting structured destination data through a unified search, filtering, discovery, and detail-view experience.
+
+---
+
+# 2. DEVELOPMENT RULES
+
+Follow these rules throughout the project:
+
+1. First inspect the existing workspace, repository, package files, and source code.
+2. If the workspace is empty, initialize the project from scratch.
+3. If an existing implementation is present, preserve useful working functionality and improve it rather than unnecessarily rebuilding everything.
+4. Create a clear development plan and execute it.
+5. Build functional features, not decorative buttons.
+6. Do not leave core features as TODO comments, fake API calls, or nonfunctional placeholders.
+7. Do not invent tourism facts, opening hours, entry fees, historical details, official URLs, image ownership, or verification status.
+8. Clearly distinguish verified information, sourced information, and information awaiting verification.
+9. Never expose database credentials, API keys, JWT secrets, or other secrets in frontend code.
+10. Use environment variables and provide an `.env.example` file.
+11. Do not claim that deployment, testing, database connection, or external integration succeeded unless it has actually been completed and verified.
+12. If a service requires credentials or user authorization, implement the integration correctly where possible and document the remaining setup.
+13. Keep the code readable, modular, and appropriate for an internship-level project.
+14. Run the available checks, fix errors, and retest after changes.
+15. Make reasonable technical decisions independently instead of repeatedly asking me to approve ordinary implementation details.
+
+---
+
+# 3. TECHNOLOGY STACK
+
+Use this practical full-stack JavaScript stack unless the existing repository requires a compatible alternative.
+
+## Frontend
+- React.js with Vite.
+- JavaScript and JSX.
+- Tailwind CSS for styling.
+- React Router for navigation.
+- Lucide React for icons.
+- Fetch API or Axios for backend requests.
+- React Hook Form or straightforward controlled forms for form handling.
+
+## Backend
+- Node.js.
+- Express.js.
+- RESTful API architecture.
+- JWT-based authentication for administrators.
+- bcrypt or bcryptjs for password hashing.
+- Server-side validation and centralized error handling.
+
+## Database
+- MongoDB with Mongoose.
+- MongoDB Atlas for hosted database deployment, or a local MongoDB instance during development.
+
+Do not use Firebase as a replacement for MongoDB.
+
+## Testing
+- Vitest and React Testing Library for frontend tests where practical.
+- Supertest for backend API testing.
+- ESLint for code quality.
+
+## Deployment
+- Frontend: Vercel or Netlify.
+- Backend: a compatible Node.js hosting provider.
+- Database: MongoDB Atlas.
+
+Choose compatible, stable package versions and ensure the application can be installed and run using the documented commands.
+
+---
+
+# 4. PROFESSIONAL UI/UX DESIGN
+
+Create an attractive tourism website inspired by the visual quality of modern travel magazines, premium destination guides, and India's cultural diversity.
+
+## Design direction
+
+Use:
+- Warm ivory or light neutral backgrounds.
+- Deep forest green as a primary brand color.
+- Saffron or muted orange as an accent.
+- Dark readable typography.
+- Beautiful landscape and cultural photography.
+- Generous spacing and rounded cards.
+- Subtle shadows and tasteful transitions.
+- A clean, consistent grid system.
+
+Avoid:
+- Excessive gradients.
+- Excessive animations.
+- Generic dashboard-like styling on every page.
+- Oversized text that pushes useful content below the fold.
+- Excessive emoji usage.
+- Broken image placeholders.
+- Fake ratings, fake user reviews, or invented statistics.
+
+Use accessible contrast, visible focus indicators, descriptive image alt text, and clear form labels.
+
+## Brand identity
+
+Brand name: TravelBharat
+
+Tagline: Discover India, One State at a Time.
+
+Create a simple, professional logo that combines a travel or location concept with an Indian-inspired visual identity. Use a lightweight SVG or icon-based logo that can be reused throughout the application.
+
+## Global navigation
+
+Create a responsive header containing:
+- TravelBharat logo.
+- Home.
+- Explore India.
+- States & UTs.
+- Categories.
+- About.
+- Search control.
+- Admin Login, where appropriate.
+
+On mobile, use a working navigation drawer or menu.
+
+Create a consistent footer containing:
+- Short brand introduction.
+- Explore links.
+- Popular categories.
+- About and contact information.
+- Data accuracy disclaimer.
+- Privacy policy.
+- Terms of use.
+- Copyright notice.
+
+Do not invent real contact information or official partnerships.
+
+---
+
+# 5. REQUIRED PAGES
+
+Build all the following pages with proper routing.
+
+## Page 1: Home
+
+Create a compelling homepage with:
+
+1. Hero section featuring Indian travel imagery.
+2. Headline: "Discover India, One State at a Time."
+3. Supporting description explaining TravelBharat.
+4. Working search bar for tourist destinations.
+5. Explore States and Union Territories section.
+6. Popular destination cards selected from actual available database records.
+7. Explore by category section.
+8. Cultural heritage and nature discovery sections.
+9. Lesser-known destinations section, using appropriately sourced records.
+10. A travel inspiration section.
+11. Footer with navigation and disclaimers.
+
+All dynamic sections must use real records from the application database or clearly identified local demonstration data.
+
+Do not display arbitrary destination names that lead to nonexistent pages.
+
+## Page 2: Explore India
+
+Create a dedicated destination discovery page with:
+
+- Search input.
+- State and union territory selector.
+- City selector where applicable.
+- Category filters.
+- Best-time-to-visit filter where reliable structured data exists.
+- Sorting options.
+- Pagination or working load-more functionality.
+- Result count based on actual query results.
+- Responsive destination cards.
+- Loading, empty, and error states.
+- Clear filters control.
+
+Filters must work together instead of independently displaying unrelated results.
+
+Support URL query parameters where practical so filtered views can be shared.
+
+## Page 3: States and Union Territories
+
+Represent all 28 Indian states and 8 union territories.
+
+Create:
+- Searchable state and UT directory.
+- State and UT cards.
+- Capital information where verified.
+- State descriptions where reliable information is available.
+- A link to each state or UT detail page.
+- Optional India map visualization if a reliable map asset or suitable library is available.
+
+If using an interactive map, make sure every selectable region corresponds to a valid state or UT record. If accurate geographic boundaries are unavailable, use a well-designed directory instead of a misleading map.
+
+Do not omit northeastern states or union territories.
+
+## Page 4: State or UT Detail
+
+For every state and union territory, create a dynamic page containing:
+
+- State or UT name.
+- Hero image.
+- Introduction.
+- Capital, where applicable and verified.
+- Geography and cultural overview where supported by sources.
+- Available tourist destinations.
+- Popular cities.
+- Heritage destinations.
+- Nature destinations.
+- Religious destinations.
+- Adventure destinations.
+- Relevant travel information.
+- Links to destination detail pages.
+
+If a section has no verified content, hide it or clearly communicate that the information is being developed.
+
+## Page 5: City Detail
+
+Create city pages that contain:
+
+- City name and location.
+- City introduction.
+- Associated state or UT.
+- Tourist places in that city.
+- Categories of attractions.
+- Relevant nearby destinations, when geographical data supports the relationship.
+- Links to individual destination pages.
+
+Do not generate unsupported nearby-distance claims.
+
+## Page 6: Tourist Destination Detail
+
+Create a reusable, dynamic destination page.
+
+Each destination page should support:
+
+- Destination name.
+- Main image.
+- Additional gallery images.
+- State and city.
+- Destination category.
+- Short summary.
+- Detailed description.
+- Historical or cultural significance, when applicable.
+- Best time to visit.
+- Recommended visit duration, only when sourced or clearly identified as editorial guidance.
+- Entry fees, if applicable and verified.
+- Opening hours, if applicable and verified.
+- Address or location information.
+- Map link or map embed, when configured.
+- Nearby attractions.
+- Travel tips.
+- Accessibility information, when available.
+- Information sources and last-reviewed date.
+- Related destinations.
+- Breadcrumb navigation.
+- Shareable URL.
+
+Missing information must be displayed as "Information not available" or omitted where appropriate. Never replace unknown fees with ₹0 or unknown opening hours with fabricated schedules.
+
+## Page 7: Category Pages
+
+Implement these categories:
+
+- Heritage.
+- Nature.
+- Religious.
+- Adventure.
+
+Allow future categories to be added through the database or controlled configuration.
+
+Each category page must show relevant destination records and support search, sorting, and pagination.
+
+## Page 8: Search Results
+
+Build a dedicated search results experience supporting:
+
+- Destination name.
+- City name.
+- State or UT name.
+- Category.
+- Relevant description keywords.
+
+Use debouncing on frontend search inputs when appropriate.
+
+Handle case-insensitive search and empty results gracefully.
+
+Use server-side filtering for scalable queries rather than downloading the entire database to the browser.
+
+## Page 9: About TravelBharat
+
+Explain:
+- Project purpose.
+- Problem being addressed.
+- How destination information is organized.
+- Intended users.
+- Limitations of the informational platform.
+- Future development plans.
+
+Do not claim official government affiliation or endorsement unless that relationship actually exists.
+
+## Page 10: Contact and Feedback
+
+Provide a functional feedback form with:
+- Name, optional.
+- Email, optional.
+- Feedback category.
+- Message.
+- Validation.
+- Success and error messages.
+
+Create a backend endpoint and persist submissions in MongoDB if database access is configured.
+
+Add spam-prevention measures such as server-side validation, message-length limits, and rate limiting.
+
+Do not expose submissions publicly.
+
+## Page 11: Privacy Policy and Terms
+
+Create basic, project-appropriate policy pages explaining:
+- Information collected.
+- Purpose of collection.
+- Data storage and retention.
+- Contact and feedback submissions.
+- Administrator access.
+- Third-party services.
+- Cookies or analytics, if implemented.
+- Data accuracy limitations.
+- Appropriate disclaimers.
+
+Do not claim legal compliance or certifications without verification.
+
+---
+
+# 6. ADMIN DASHBOARD
+
+Build a protected administrative dashboard that actually manages tourism content.
+
+## Authentication
+
+Implement:
+- Administrator login.
+- Secure password hashing.
+- JWT authentication.
+- Protected frontend routes.
+- Server-side authorization middleware.
+- Logout.
+- Authentication expiration.
+- Login rate limiting.
+- Secure production cookie or token handling.
+
+Do not create a public admin registration page.
+
+Provide a safe initial administrator creation process through a documented setup command or seed script using environment variables. Never hardcode production credentials or publish a default password.
+
+If using cookies, implement appropriate secure cookie settings and CSRF protections where necessary. If using bearer tokens, avoid unsafe persistent storage and document the security trade-offs.
+
+## Dashboard overview
+
+Show counts derived from actual database records:
+- Total states and UTs.
+- Total cities.
+- Total destinations.
+- Destinations by category.
+- Published destinations.
+- Draft destinations.
+- Pending verification records.
+- Recent content updates.
+
+Do not invent dashboard statistics.
+
+## Destination management
+
+Administrators must be able to:
+- Add a destination.
+- View destinations.
+- Edit destinations.
+- Delete destinations after confirmation.
+- Save drafts.
+- Publish or unpublish content.
+- Assign a state and city.
+- Select categories.
+- Add and remove gallery images.
+- Enter best-time information.
+- Enter fees and opening hours with source details.
+- Add nearby attraction references.
+- Add source URLs.
+- Record verification status.
+- Record the last-reviewed date.
+
+Implement form validation on both frontend and backend.
+
+Use confirmation dialogs for destructive actions.
+
+## State and city management
+
+Provide CRUD operations for states, UTs, and cities, with safeguards against invalid relationships.
+
+Avoid deleting a state or city while published destinations depend on it unless those relationships are safely handled.
+
+## Content moderation
+
+Support these content states:
+- Draft.
+- Pending verification.
+- Verified.
+- Published.
+- Archived.
+
+Publishing rules must be explicit. A record should not automatically be marked verified just because an administrator entered it.
+
+Keep source attribution and verification information associated with the content.
+
+---
+
+# 7. DATABASE DESIGN
+
+Create Mongoose models with proper validation, indexes, timestamps, and relationships.
+
+## State model
+
+Fields:
+- name.
+- slug.
+- region, if supported.
+- capital, if verified.
+- description.
+- heroImage.
+- contentSources.
+- verificationStatus.
+- timestamps.
+
+## City model
+
+Fields:
+- name.
+- slug.
+- state reference.
+- description.
+- coordinates, when available and verified.
+- contentSources.
+- verificationStatus.
+- timestamps.
+
+Ensure city slugs are unique within the appropriate state scope.
+
+## TouristPlace model
+
+Fields:
+- name.
+- slug.
+- state reference.
+- city reference.
+- category.
+- shortDescription.
+- fullDescription.
+- historicalSignificance.
+- bestTimeToVisit.
+- entryFee, with currency and applicable conditions.
+- openingHours.
+- visitDuration, where appropriate.
+- address.
+- coordinates, when verified.
+- mapUrl.
+- heroImage.
+- gallery.
+- nearbyAttractions, using references where possible.
+- travelTips.
+- accessibilityInformation.
+- sources.
+- verificationStatus.
+- publicationStatus.
+- lastReviewedAt.
+- createdBy.
+- updatedBy.
+- timestamps.
+
+Use normalized references for states, cities, and related attractions where appropriate.
+
+## Category model or controlled category collection
+
+Support:
+- Heritage.
+- Nature.
+- Religious.
+- Adventure.
+
+Allow controlled expansion without introducing inconsistent category names.
+
+## Admin model
+
+Fields:
+- username or email.
+- passwordHash.
+- role.
+- active status.
+- lastLoginAt.
+- timestamps.
+
+Use least-privilege permissions and server-side authorization.
+
+## Feedback model
+
+Fields:
+- optional name.
+- optional email.
+- category.
+- message.
+- status.
+- timestamps.
+
+## Source and verification requirements
+
+For each tourism record, support:
+- Source URL.
+- Source title or publisher.
+- Date checked, where known.
+- Verification status.
+- Last reviewed date.
+
+Do not mark a record as verified without a documented review.
+
+Add useful database indexes for:
+- Destination name.
+- Destination slug.
+- State and city references.
+- Category.
+- Publication status.
+- Search fields.
+
+Use appropriate indexes for frequently used filter combinations.
+
+---
+
+# 8. TOURISM DATA AND SEEDING
+
+Populate the database with useful, structured tourism data.
+
+## Geographic coverage
+
+Create all 28 states and 8 union territories of India.
+
+Do not hardcode a claim that every destination across India is already covered. Build the system to support expansion.
+
+## Initial destination coverage
+
+Prepare a meaningful starter dataset spanning all states and UTs where reliable information can be obtained.
+
+Prioritize breadth first, followed by deeper destination coverage.
+
+Use a maintainable JSON or JavaScript seed dataset that can be imported into MongoDB.
+
+Include:
+- Place name.
+- State or UT.
+- City.
+- Category.
+- Summary.
+- Description.
+- Best time to visit, when supported.
+- Map link or coordinates, when supported.
+- Image reference.
+- Source information.
+- Verification and publication status.
+
+Prefer official tourism departments, Archaeological Survey of India publications, relevant public authorities, and other reliable sources.
+
+If information cannot be verified, mark it pending verification and do not present it as an officially verified fact.
+
+Do not scrape websites in ways that violate their terms, bypass access controls, or infringe image rights.
+
+## Image management
+
+Use appropriately licensed images or image sources whose usage terms permit the intended use.
+
+Store image URLs or provider references rather than unnecessarily embedding large image files in the database.
+
+Do not assume that a publicly accessible image is free to reuse.
+
+Provide descriptive alt text.
+
+If an image is unavailable, show a designed fallback image or neutral placeholder.
+
+Never display broken image icons.
+
+## Seed scripts
+
+Implement:
+- A seed script for states and UTs.
+- A seed script for cities and destinations.
+- Idempotent imports where practical.
+- Duplicate detection.
+- A clear command to run the seed process.
+- A safe development reset process, separated from production operations.
+
+The seed process must not delete production records by default.
+
+---
+
+# 9. BACKEND REST API
+
+Build a modular Express backend with controllers, routes, models, middleware, services, and validation schemas.
+
+Use consistent JSON response formats and appropriate HTTP status codes.
+
+Implement at least the following endpoints.
+
+## Public endpoints
+
+- GET /api/health
+- GET /api/states
+- GET /api/states/:slug
+- GET /api/cities
+- GET /api/cities/:slug
+- GET /api/places
+- GET /api/places/:slug
+- GET /api/categories
+- GET /api/search?q=...
+- GET /api/places/featured
+- GET /api/places/nearby/:placeId, if geographical information supports it
+- POST /api/feedback
+
+Support query parameters for:
+- State.
+- City.
+- Category.
+- Keyword.
+- Page.
+- Page size.
+- Sorting.
+
+Validate query parameters and cap page size.
+
+Ensure public endpoints return only published records that meet the applicable visibility and verification policy.
+
+Do not expose administrator emails, password hashes, internal moderation notes, or private feedback.
+
+## Administrator endpoints
+
+- POST /api/admin/auth/login
+- POST /api/admin/auth/logout, if the chosen authentication strategy requires it
+- GET /api/admin/auth/me
+- GET /api/admin/dashboard
+- GET /api/admin/states
+- POST /api/admin/states
+- PATCH /api/admin/states/:id
+- DELETE /api/admin/states/:id
+- GET /api/admin/cities
+- POST /api/admin/cities
+- PATCH /api/admin/cities/:id
+- DELETE /api/admin/cities/:id
+- GET /api/admin/places
+- POST /api/admin/places
+- PATCH /api/admin/places/:id
+- DELETE /api/admin/places/:id
+- PATCH /api/admin/places/:id/status
+- GET /api/admin/feedback
+
+Add any necessary moderation and feedback-management endpoints.
+
+Every administrator endpoint must enforce authentication and authorization on the server.
+
+Use centralized error handling, input validation, safe error messages, request-size limits, and rate limiting.
+
+---
+
+# 10. SEARCH, FILTERING, AND DISCOVERY
+
+Implement real search and filtering throughout the application.
+
+Requirements:
+- Case-insensitive keyword search.
+- State and UT filtering.
+- City filtering.
+- Category filtering.
+- Multiple filters working together.
+- Sorting by name and appropriate editorial fields.
+- Pagination.
+- Clear filters.
+- Empty results state.
+- Loading indicators.
+- Error recovery.
+
+Use indexed MongoDB queries or MongoDB text indexes where appropriate.
+
+Avoid building unsafe MongoDB queries directly from untrusted user input.
+
+Keep the search implementation maintainable and document its limitations.
+
+---
+
+# 11. MAP AND LOCATION FEATURES
+
+Provide destination location links using valid, sourced map URLs where available.
+
+If a map provider API is configured:
+- Implement map integration through environment variables.
+- Display location markers only when supported by valid coordinates.
+- Include an accessible alternative list view.
+- Handle missing coordinates gracefully.
+
+If no API key is available, use valid external map links when possible.
+
+Do not claim to have implemented a fully interactive map if the application only opens an external map website.
+
+Do not fabricate destination coordinates or nearby distances.
+
+---
+
+# 12. SECURITY AND RELIABILITY
+
+Implement appropriate protections, including:
+
+- Environment-based configuration.
+- Password hashing.
+- Authentication and authorization.
+- Request validation.
+- Safe error handling.
+- Rate limiting.
+- CORS configured for known frontend origins.
+- Secure HTTP headers.
+- MongoDB query sanitization.
+- Protection against mass assignment.
+- Request-size limits.
+- Safe image URL validation.
+- Production-safe logging.
+- Database connection error handling.
+- No secrets committed to Git.
+- `.gitignore`.
+- Proper production cookie and HTTPS settings.
+
+Do not store or log administrator passwords.
+
+Do not allow a user to modify restricted fields simply by submitting additional JSON properties.
+
+Do not expose stack traces or database internals to public clients in production.
+
+If file uploads are implemented, validate MIME type, file size, and authorization; do not trust filenames or file extensions alone.
+
+---
+
+# 13. PERFORMANCE, ACCESSIBILITY, AND SEO
+
+## Performance
+
+Implement:
+- Lazy-loaded images.
+- Correct image sizing and compression where possible.
+- Pagination.
+- Efficient database queries.
+- Appropriate caching where safe.
+- Reusable UI components.
+- Route-based code splitting where beneficial.
+- Lightweight animations.
+
+Aim for a page load time of two seconds or less under suitable test conditions. Measure actual results instead of promising a universal guarantee.
+
+## Accessibility
+
+Follow practical WCAG accessibility principles:
+- Semantic HTML.
+- Keyboard navigation.
+- Visible focus indicators.
+- Accessible forms.
+- Descriptive image alt text.
+- Adequate color contrast.
+- Screen-reader-friendly status messages.
+- Reduced-motion support where appropriate.
+
+## SEO
+
+Implement:
+- Unique page titles and descriptions.
+- Semantic page structure.
+- Canonical URLs where appropriate.
+- Open Graph metadata.
+- Sitemap generation.
+- robots.txt.
+- Structured data only when its claims are accurate and supported.
+- Human-readable destination URLs.
+- Appropriate not-found pages.
+- Server-rendered or prerendered content where needed for SEO.
+
+If using Vite with a client-rendered React app, do not falsely claim that it provides full server-side rendering. Document the trade-offs and use a suitable prerendering or rendering strategy if necessary.
+
+---
+
+# 14. ERROR HANDLING AND USER EXPERIENCE
+
+Every major screen must handle:
+- Initial loading.
+- Successful data retrieval.
+- Empty data.
+- Network failure.
+- Invalid user input.
+- Unauthorized access.
+- Not-found records.
+- Server errors.
+
+Provide friendly, useful messages and retry actions where appropriate.
+
+Avoid blank pages and endless loading indicators.
+
+Create a custom 404 page with a working route back to the homepage.
+
+Make forms show validation errors beside the relevant fields.
+
+Prevent accidental duplicate form submissions.
+
+---
+
+# 15. PROJECT STRUCTURE
+
+Use a clear structure similar to the following, adapting it to the final implementation:
+
+travelbharat/
+  client/
+    public/
+    src/
+      assets/
+      components/
+      layouts/
+      pages/
+      routes/
+      hooks/
+      services/
+      utils/
+      styles/
+      App.jsx
+      main.jsx
+  server/
+    src/
+      config/
+      models/
+      controllers/
+      routes/
+      middleware/
+      services/
+      validators/
+      utils/
+      app.js
+      server.js
+    scripts/
+      seedStates.js
+      seedDestinations.js
+      createAdmin.js
+  tests/
+  docs/
+  .env.example
+  .gitignore
+  README.md
+  package.json
+
+Keep the frontend and backend responsibilities separate.
+
+If a different structure better suits the repository, use it consistently and document it.
+
+---
+
+# 16. ENVIRONMENT CONFIGURATION
+
+Create `.env.example` with the necessary variables, such as:
+
+NODE_ENV=
+PORT=
+MONGODB_URI=
+JWT_SECRET=
+JWT_EXPIRES_IN=
+FRONTEND_URL=
+ADMIN_EMAIL=
+ADMIN_INITIAL_PASSWORD=
+MAP_PROVIDER_API_KEY=
+
+Include only variables actually used by the application.
+
+Never commit a populated `.env` file.
+
+Validate required environment variables at startup and display clear, non-sensitive configuration errors.
+
+Do not embed administrator credentials into frontend bundles or seed files committed to Git.
+
+Provide separate instructions for local development and production deployment.
+
+---
+
+# 17. TESTING REQUIREMENTS
+
+Write and run tests for critical functionality.
+
+## Frontend tests
+- Homepage renders.
+- Navigation works.
+- Search form works.
+- State and category filters work.
+- Destination cards open correct detail pages.
+- Forms display validation errors.
+- Empty and error states render correctly.
+- Protected admin pages require authentication.
+
+## Backend tests
+- Health endpoint.
+- State listing.
+- Destination listing.
+- Destination detail.
+- Search and combined filters.
+- Pagination.
+- Invalid query handling.
+- Missing destination handling.
+- Administrator login.
+- Unauthorized administrator requests.
+- Destination creation and editing.
+- Rejection of invalid input.
+- Protection against unauthorized publishing.
+- Feedback submission validation.
+
+Use a test database or isolated test setup.
+
+Never run destructive test cleanup against the production database.
+
+Run:
+- Dependency/build checks.
+- Linting.
+- Unit tests.
+- API tests.
+- Production build.
+- Browser or end-to-end smoke tests if the environment supports them.
+
+Fix the errors discovered and rerun the relevant checks.
+
+Report actual test results. Do not state that tests passed if they were not executed.
+
+---
+
+# 18. README AND TECHNICAL DOCUMENTATION
+
+Create a professional README containing:
+
+1. Project introduction.
+2. Problem statement.
+3. Objectives.
+4. Features.
+5. Technology stack.
+6. Architecture overview.
+7. Database schema summary.
+8. API endpoint documentation.
+9. Folder structure.
+10. Installation instructions.
+11. Environment variable setup.
+12. MongoDB setup.
+13. Seed-data instructions.
+14. Administrator creation instructions.
+15. Running frontend and backend.
+16. Testing instructions.
+17. Production build instructions.
+18. Deployment instructions.
+19. Screenshots section with genuine screenshots or clearly identified placeholders.
+20. Known limitations.
+21. Security notes.
+22. Future enhancements.
+23. Credits and source attribution.
+
+Also create:
+- `docs/PRD.md`
+- `docs/ARCHITECTURE.md`
+- `docs/DATABASE_SCHEMA.md`
+- `docs/API_DOCUMENTATION.md`
+- `docs/TESTING.md`
+- `docs/DEPLOYMENT.md`
+- `docs/DATA_SOURCES.md`
+
+Keep documentation consistent with the implementation.
+
+Do not document nonexistent endpoints or completed integrations that have not been implemented.
+
+---
+
+# 19. DEPLOYMENT
+
+Prepare the project for real deployment.
+
+## Frontend
+- Configure the production API URL.
+- Configure client-side routing fallbacks.
+- Verify the production build.
+- Configure permitted origins and metadata.
+
+## Backend
+- Configure production environment variables.
+- Configure allowed frontend origins.
+- Add health checks.
+- Ensure the server listens on the hosting provider's assigned port.
+- Handle database connection failures.
+- Avoid exposing sensitive diagnostics.
+
+## Database
+- Document MongoDB Atlas setup.
+- Use a restricted database user.
+- Configure network access appropriately.
+- Explain how to seed the database safely.
+- Never commit database credentials.
+
+## Final verification
+After deployment, if hosting credentials and access are available:
+- Deploy the frontend and backend.
+- Test the public website.
+- Test API health.
+- Test database-backed search.
+- Test administrator authentication.
+- Test destination detail pages.
+- Test mobile layout.
+- Record the actual deployed URLs.
+
+If deployment credentials or external services are unavailable, complete the deployment configuration and provide exact manual deployment steps. Clearly state that the site is not yet live rather than inventing a demo URL.
+
+---
+
+# 20. FUTURE-READY ARCHITECTURE
+
+Design the system so future features can be added without rewriting the core application:
+
+- Hindi and regional-language content.
+- Interactive India map.
+- Itinerary planner.
+- Favorites and user accounts.
+- Travel reviews and ratings.
+- Hotel and transport integrations.
+- Booking integrations.
+- Official tourism API integrations.
+- Advanced location-based discovery.
+
+These are future enhancements, not mandatory phase-one features. Do not waste time implementing payments, booking systems, or social features that are explicitly outside the current scope.
+
+---
+
+# 21. EXECUTION PLAN
+
+Execute the work in the following order.
+
+## Phase 1 — Workspace inspection and planning
+Inspect existing files and tools, decide the architecture, identify dependencies, and establish a working implementation plan.
+
+## Phase 2 — Project setup
+Initialize the frontend and backend, configure dependencies, environment validation, routing, styling, and database connectivity.
+
+## Phase 3 — Database and tourism content
+Implement schemas, indexes, state and UT records, starter destination data, source attribution, and safe seed scripts.
+
+## Phase 4 — Public frontend
+Build the homepage, discovery pages, state pages, city pages, destination details, search, filters, category pages, and informational pages.
+
+## Phase 5 — Backend API
+Implement public endpoints, query validation, pagination, search, error handling, and feedback submission.
+
+## Phase 6 — Admin dashboard
+Implement authentication, dashboard metrics, state/city/destination management, moderation, publishing, and source verification workflows.
+
+## Phase 7 — Quality and security
+Add tests, fix defects, validate access controls, improve responsiveness, check accessibility, and optimize performance.
+
+## Phase 8 — Documentation
+Create the README, PRD, architecture documentation, API documentation, database documentation, testing guide, data-source guide, and deployment guide.
+
+## Phase 9 — Production preparation
+Run the production build, verify all environment variables, prepare deployment configuration, and deploy if authorized access is available.
+
+## Phase 10 — Final audit
+Inspect the implementation against every required feature. Fix incomplete core functionality, remove dead links and misleading sample data, and provide an honest completion report.
+
+Do not stop after Phase 1 or merely describe what you intend to do. Continue implementing phases in sequence until the available environment or an external dependency genuinely prevents further progress.
+
+If context or execution limits are reached, preserve working changes and create `docs/IMPLEMENTATION_STATUS.md` listing completed work, remaining tasks, commands run, errors encountered, and the exact next step.
+
+---
+
+# 22. FINAL ACCEPTANCE CHECKLIST
+
+The project is considered ready for evaluation only when the following items have been checked.
+
+## Public website
+- [ ] Homepage is functional and responsive.
+- [ ] All 28 states and 8 UTs are represented.
+- [ ] State and UT detail pages work.
+- [ ] City pages work where city records exist.
+- [ ] Destination detail pages work.
+- [ ] Category pages work.
+- [ ] Search works.
+- [ ] Combined filters work.
+- [ ] Pagination works.
+- [ ] Image galleries work with valid images or graceful fallbacks.
+- [ ] Source attribution is available.
+- [ ] Empty, loading, error, and 404 states work.
+- [ ] Privacy, terms, about, and feedback pages exist.
+
+## Backend and database
+- [ ] MongoDB connection is configured.
+- [ ] Models and indexes are implemented.
+- [ ] Public APIs work.
+- [ ] Admin APIs work.
+- [ ] Validation and centralized error handling work.
+- [ ] Seed scripts are safe and repeatable.
+- [ ] Published-content visibility rules work.
+
+## Admin dashboard
+- [ ] Login works.
+- [ ] Unauthorized access is blocked.
+- [ ] Dashboard metrics use database data.
+- [ ] States and cities can be managed.
+- [ ] Destinations can be created, edited, and deleted safely.
+- [ ] Draft and publishing workflows work.
+- [ ] Verification and source records are maintained.
+
+## Quality and deployment
+- [ ] Production build succeeds.
+- [ ] Tests have actual recorded results.
+- [ ] No known critical security issue remains unaddressed.
+- [ ] Mobile and desktop layouts have been checked.
+- [ ] README and technical documentation match the code.
+- [ ] Environment variables are documented.
+- [ ] Deployment configuration is prepared.
+- [ ] Live URLs are provided only if genuinely deployed and verified.
+
+---
+
+# 23. FINAL RESPONSE FORMAT
+
+When the implementation work is finished, report:
+
+1. **Project status:** completed, partially completed, or blocked.
+2. **Features implemented:** list actual working features.
+3. **Technology stack:** exact technologies used.
+4. **Database status:** connected, seeded, or awaiting configuration.
+5. **Admin access:** explain the safe administrator creation procedure without revealing secrets.
+6. **Tests:** actual commands and pass/fail results.
+7. **Run locally:** exact commands from a clean setup.
+8. **Deployment:** real URL if deployed, otherwise remaining steps.
+9. **Known limitations:** anything unfinished or dependent on external services.
+10. **Remaining tasks:** specific actionable items, if any.
+
+Do not declare the project 100% complete simply because the code has been generated.
+
+Start by inspecting the workspace, then immediately begin implementation. Deliver a functional, professional TravelBharat application with the strongest possible level of completeness supported by the available tools and data.

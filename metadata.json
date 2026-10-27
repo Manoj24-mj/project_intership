@@ -1,0 +1,6 @@
+{
+  "name": "TravelBharat – Explore India State by State",
+  "description": "Centralized digital tourism encyclopedia and travel exploration platform providing state-wise and city-wise heritage, nature, culture, and travel insights across India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
