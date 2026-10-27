@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "seed:mongo": "tsx src/server/seed.ts"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
@@ -19,6 +20,7 @@
     "express": "^4.21.2",
     "firebase": "^13.1.0",
     "lucide-react": "^0.546.0",
+    "mongoose": "^9.11.4",
     "motion": "^12.23.24",
     "react": "^19.0.1",
     "react-dom": "^19.0.1",
